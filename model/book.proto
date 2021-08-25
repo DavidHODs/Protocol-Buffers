@@ -1,0 +1,24 @@
+syntax = "proto3";
+
+option go_package = "github.com/DavidHODs/buffers/model";
+
+// protoc --go_out=. --go_opt=paths=source_relative *.proto
+
+message Book {
+    int32 Id = 1;
+    string Title = 2;
+    Authors Author = 3;
+    Category Category = 4;
+}
+
+enum Category {
+    Novel = 0;
+    SciFi = 1;
+    Fantasy = 2;
+    Spiritual = 3;
+}
+
+message Authors {
+    int32 Id = 1;
+    string Name = 2;
+}
